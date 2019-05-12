@@ -1,0 +1,35 @@
+body {
+  
+  background: url("../images/concrete_seamless.png");
+}
+
+
+h1 {
+    background-color: #aa654a;
+    text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+}
+
+h1, h2 {
+    font-family: Verdana, 'Times New Roman', Times, serif
+}
+
+h2 {
+    color: #644aaa;
+    font-size: 25px;
+        text-align: center;
+}
+
+h3 {
+    color:  #644aaa;
+    background-color: #FFFFFF;
+    font-size: 16px;
+}
+
+
+    
+    
+   
+
+ 
