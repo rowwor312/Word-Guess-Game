@@ -1,13 +1,7 @@
-<html>
-<head> 
-<title>JS File</title>
-    
-</head>
-<body>
 
-<script type="text/javascript">
+
 // Game Words
-var words = ['Bugs Bunny', 'Tweety', 'Tasmanian Devil', 'Daffy Duck', 'Porky Pig', 'Marvin the Martian', 'Elmer Fudd', 'Pepe Le Pew', 'Sylvester', 'Speedy Gonzales', 'Foghorn Leghom', 'Yosemite Sam', 'Granny', 'Penelope Pussycat', 'Wile E. Coyote', 'Slowpoke Rodriguez', 'Barnyard Dawg', 'Witch Hazel', 'Hector the Bulldog', 'Road Runner', 'Sylvester Jr', 'Claude Cat', 'Henery Hawk', 'Little Red Riding Hood', 'Clyde Bunny', 'Hatta Mari']
+var words= ['Bugs Bunny', 'Tweety', 'Tasmanian Devil', 'Daffy Duck', 'Porky Pig', 'Marvin the Martian', 'Elmer Fudd', 'Pepe Le Pew', 'Sylvester', 'Speedy Gonzales', 'Foghorn Leghom', 'Yosemite Sam', 'Granny', 'Penelope Pussycat', 'Wile E. Coyote', 'Slowpoke Rodriguez', 'Barnyard Dawg', 'Witch Hazel', 'Hector the Bulldog', 'Road Runner', 'Sylvester Jr', 'Claude Cat', 'Henery Hawk', 'Little Red Riding Hood', 'Clyde Bunny', 'Hatta Mari']
 var currentWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 // Remaining Guesses
@@ -88,32 +82,4 @@ document.onkeyup = function (event) {
         location.reload();
     }
 
-    // Game Won/Reset
-        if (lettersToGuess() == 0) {
-        var phrases = ['You Win!', 'You Are A Winner!']
-        var nextGame = phrases[Math.floor(Math.random() * phrases.length)];
-        alert(nextGame);
-
-
-        // Reset Guess/Letters
-        guessesLeft = 6;
-        document.getElementById("guesses-left").innerHTML = guessesLeft;
-        document.getElementById("letters-guessed").innerHTML = resetLettersGuessed;
-       
-        // New Word
-        currentWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
-
-        newWord = [];
-        for (i = 0; i < currentWord.length; i++) {
-            newWord.push("__");
-        }
-        document.getElementById("word-guess").innerHTML = newWord.join(" ");
-
-        // Total Wins
-        wins++;
-        document.getElementById("wins").innerHTML = wins;
-    }
 }
-</script>
-</body>
-</html>
